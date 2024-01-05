@@ -2,8 +2,9 @@ let dayBox = document.getElementById("day-box");
 let hrBox = document.getElementById("hr-box");
 let minBox = document.getElementById("min-box");
 let secBox = document.getElementById("sec-box");
-let endDate = new Date(2024, 0, 1, 0, 4);
+let endDate = new Date(2024, 0, 5, 19, 10);
 let endTime = endDate.getTime();
+
 
 function countdown() {
   let todayDate = new Date();
@@ -18,8 +19,8 @@ function countdown() {
   if (endTime < todayTime) {
     clearInterval(i);
     document.querySelector(
-      ".countdown"
-    ).innerHTML = `<marque><h1>HAPPY NEW YEAR</h1></marque>`;
+      ".wrapper"
+    ).innerHTML = `<img src="75th.jpeg" alt= "Happy Republic Day" height=1540px width=3000px>`;
   } else {
     let daysLeft = Math.floor(remainingTime / oneDay);
     let hrsLeft = Math.floor((remainingTime % oneDay) / oneHr);
